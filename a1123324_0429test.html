@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高雄市人口分布</title>
     <style>
-        /* 基本页面样式 */
+        /* 页面基础样式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -17,10 +17,11 @@
         h1, h2 {
             color: #333;
             text-align: center;
+            margin-top: 30px;
         }
 
-        /* 文字框容器 */
-        .text-box {
+        /* 内容区块通用样式 */
+        .text-box, .image-text-section, iframe {
             background-color: #fff;
             padding: 20px;
             margin: 20px auto;
@@ -28,19 +29,54 @@
             max-width: 1000px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-left: 6px solid #4CAF50; /* 增加侧边边框 */
         }
 
-        /* 文字样式 */
-        .text-box p {
+        .text-box {
+            border-left: 6px solid #4CAF50;
+        }
+
+        .text-box p, .image-text-section p {
             font-size: 16px;
             color: #555;
             text-align: justify;
         }
 
         iframe {
-            display: block;
-            margin: 20px auto;
+            border: none;
+            width: 100%;
+            height: 500px;
+        }
+
+        /* 图片与文字并排 */
+        .image-text-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .image-text-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .image-text-section p {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* 小屏幕优化 */
+        @media (max-width: 768px) {
+            .image-text-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-text-section img {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -50,9 +86,9 @@
     <div class="text-box">
         <p>高雄市65至80岁人口呈现逐年增加趋势，主要集中在市区及近郊区域，尤其是老年人口较多的社区，生活便利设施和医疗资源相对完善。老年人群体的居住选择趋向于交通便利、环境较为安静的区域。</p>
     </div>
-    
+
     <h2>60岁至80岁 高雄市人口</h2>
-    <iframe src="https://plotdb.io/v/chart/37374" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen="true"></iframe>
 
     <h1>高雄市人口分布 (80岁至100岁）</h1>
     <div class="text-box">
@@ -60,16 +96,16 @@
     </div>
 
     <h2>80岁至100岁 高雄市人口</h2>
-    <iframe src="https://plotdb.io/v/chart/37385" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; margin: 20px auto; max-width: 1000px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片" style="max-width: 100%; width: 300px; border-radius: 8px; margin-right: 20px; margin-bottom: 20px;">
-    <div style="flex: 1; min-width: 250px;">
-        <p style="font-size: 16px; color: #555; text-align: justify;">
+    <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen="true"></iframe>
+
+    <!-- 新增標題與圖文區塊 -->
+    <h1>高雄市圖表</h1>
+    <div class="image-text-section">
+        <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片">
+        <p>
             隨著高齡人口比例日增，如何提升老年人的身體健康與生活品質成為社會關注的焦點。本計畫旨在透過輕度運動，如散步和簡單的健美操，改善老年人心肺功能，緩解長時間坐著帶來的疲勞，同時增進社交互動，減少孤獨感。計畫將設立輕度運動手工藝，每週定期舉辦散步和伸展操課程，適合各種體適能的長者參與。散步活動將安排固定路線並配有志工陪伴，不僅有助於提升心肺功能，還能促進社交交流。健身操和伸展課程將透過簡單易行的動作，增強關節靈活性、肌肉力量，改善血液循環，減少身體不適。此外，該計劃還結合社區志工團隊，為老年人提供居家安全評估和修繕服務，鼓勵具有木工、水電等技能的長者參與互助，增強他們的參與感與歸屬感。
         </p>
     </div>
-</div>
-
 
 </body>
 </html>

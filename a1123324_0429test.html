@@ -81,7 +81,7 @@
             text-align: justify;
         }
 
-        /* 图表样式 */
+        /* 圖表樣式 */
         iframe {
             display: block;
             width: 100%;
@@ -90,33 +90,31 @@
             border-radius: 8px;
         }
 
-        /* 左右并排布局 */
-        .content-section {
+        /* 圖片+文字卡片 */
+        .image-text-section {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: flex-start;
             gap: 20px;
         }
 
-        .text-box {
-            flex: 1;
-            min-width: 40%;
+        .image-text-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            flex-shrink: 0;
         }
 
-        .chart-box {
+        .image-text-section p {
             flex: 1;
-            min-width: 40%;
+            min-width: 250px;
         }
 
         @media (max-width: 768px) {
-            .content-section {
+            .image-text-section {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .text-box,
-            .chart-box {
-                min-width: 100%;
             }
         }
 
@@ -142,18 +140,13 @@
 
     <!-- 65至80歲 高雄市人口 -->
     <h1 id="age65to80">高雄市人口分布（65歲至80歲）</h1>
+    <div class="card text-box">
+        <p>高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。 此外，許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。尤其是在老年人口較為集中的社區，週邊的公共服務和照顧設施也更加完備，為老年人提供了更好的居住條件。 老年人群的居住選擇趨向於綜合考慮生活便利性、醫療保障和居住環境的安全與舒適。因此，政府和社會應積極關注老年人的居住需求，提供更多的支持與保障，提升老年人的整體生活品質。</p>
+    </div>
     
-    <!-- 左右並排布局 -->
-    <div class="content-section">
-        <!-- 文字內容 -->
-        <div class="card text-box">
-            <p>高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。 此外，許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。尤其是在老年人口較為集中的社區，週邊的公共服務和照顧設施也更加完備，為老年人提供了更好的居住條件。 老年人群的居住選擇趨向於綜合考慮生活便利性、醫療保障和居住環境的安全與舒適。因此，政府和社會應積極關注老年人的居住需求，提供更多的支持與保障，提升老年人的整體生活品質。</p>
-        </div>
-        
-        <!-- 图表 -->
-        <div class="card chart-box">
-            <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen="true"></iframe>
-        </div>
+    <h2>65歲至80歲 高雄市人口</h2>
+    <div class="card">
+        <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen="true"></iframe>
     </div>
 
     <!-- 80至100歲 高雄市人口 -->

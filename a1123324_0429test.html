@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高雄市人口分布</title>
     <style>
-        /* 页面基础样式 */
+        /* 基本页面样式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -17,11 +17,10 @@
         h1, h2 {
             color: #333;
             text-align: center;
-            margin-top: 30px;
         }
 
-        /* 内容区块通用样式 */
-        .text-box, .image-text-section, iframe {
+        /* 文字框容器 */
+        .text-box {
             background-color: #fff;
             padding: 20px;
             margin: 20px auto;
@@ -29,54 +28,49 @@
             max-width: 1000px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .text-box {
             border-left: 6px solid #4CAF50;
         }
 
-        .text-box p, .image-text-section p {
+        /* 文字样式 */
+        .text-box p {
             font-size: 16px;
             color: #555;
             text-align: justify;
         }
 
         iframe {
-            border: none;
-            width: 100%;
-            height: 500px;
+            display: block;
+            margin: 20px auto;
         }
 
-        /* 图片与文字并排 */
+        /* 新增图片与文字区块 */
         .image-text-section {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             align-items: flex-start;
-            gap: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .image-text-section img {
-            width: 100%;
-            max-width: 300px;
+            max-width: 100%;
+            width: 300px;
             border-radius: 8px;
-            flex-shrink: 0;
+            margin-right: 20px;
+            margin-bottom: 20px;
         }
 
         .image-text-section p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
             flex: 1;
             min-width: 250px;
-        }
-
-        /* 小屏幕优化 */
-        @media (max-width: 768px) {
-            .image-text-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .image-text-section img {
-                margin-bottom: 10px;
-            }
         }
     </style>
 </head>
@@ -86,9 +80,9 @@
     <div class="text-box">
         <p>高雄市65至80岁人口呈现逐年增加趋势，主要集中在市区及近郊区域，尤其是老年人口较多的社区，生活便利设施和医疗资源相对完善。老年人群体的居住选择趋向于交通便利、环境较为安静的区域。</p>
     </div>
-
+    
     <h2>60岁至80岁 高雄市人口</h2>
-    <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen="true"></iframe>
+    <iframe src="https://plotdb.io/v/chart/37374" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
 
     <h1>高雄市人口分布 (80岁至100岁）</h1>
     <div class="text-box">
@@ -96,10 +90,9 @@
     </div>
 
     <h2>80岁至100岁 高雄市人口</h2>
-    <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen="true"></iframe>
+    <iframe src="https://plotdb.io/v/chart/37385" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
 
-    <!-- 新增標題與圖文區塊 -->
-    <h1>高雄市圖表</h1>
+    <!-- 新增圖片與說明區塊 -->
     <div class="image-text-section">
         <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片">
         <p>

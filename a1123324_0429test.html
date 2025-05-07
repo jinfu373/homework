@@ -16,7 +16,7 @@
         h1, h2 {
             color: #333;
             text-align: center;
-            margin-top: 30px;
+            margin: 0 0 20px 0;
         }
 
         .title-card {
@@ -28,12 +28,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             text-align: center;
-        }
-
-        .title-card h1 {
-            font-size: 32px;
-            margin: 0;
-            color: #2c3e50;
         }
 
         .button-container {
@@ -58,15 +52,22 @@
 
         .card {
             background-color: #fff;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 30px;
             width: 90%;
             max-width: 1000px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .image-text-section {
+        .card h2 {
+            text-align: center;
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -74,30 +75,34 @@
             gap: 20px;
         }
 
-        .image-text-section p {
+        .content-section p {
             font-size: 16px;
             color: #555;
             text-align: justify;
             flex: 1;
-            min-width: 250px;
+            min-width: 260px;
         }
 
-        .image-text-section iframe {
+        .content-section iframe,
+        .content-section img {
             flex: 1;
             min-width: 300px;
             height: 400px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
+            object-fit: cover;
         }
 
         @media (max-width: 768px) {
-            .image-text-section {
+            .content-section {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .image-text-section iframe {
+            .content-section iframe,
+            .content-section img {
                 width: 100%;
+                height: auto;
             }
         }
 
@@ -121,24 +126,36 @@
     </div>
 
     <!-- 65至80歲 高雄市人口 -->
-    <h2 id="age65to80">65歲至80歲 高雄市人口</h2>
-    <div class="card image-text-section">
-        <p>高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。政府和社會應積極關注老年人的居住需求，提供更多支持與保障，提升生活品質。</p>
-        <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen></iframe>
+    <div id="age65to80" class="card">
+        <h2>65歲至80歲 高雄市人口</h2>
+        <div class="content-section">
+            <p>
+                高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。政府和社會應積極關注老年人的居住需求，提供更多支持與保障，提升生活品質。
+            </p>
+            <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen></iframe>
+        </div>
     </div>
 
     <!-- 80至100歲 高雄市人口 -->
-    <h2 id="age80to100">80歲至100歲 高雄市人口</h2>
-    <div class="card image-text-section">
-        <p>高雄市80至100歲的高齡人口較為稀少，這部分人口的分佈特徵主要集中在市中心和一些老舊社區。這些區域通常交通便利、生活設施完備，但也常伴隨老舊建築與密集的居住環境。市中心靠近大型醫院和照護中心的社區提供便捷的醫療資源，有助於行動不便或有慢性病的高齡者即時獲得醫療服務。這些區域的護理機構、復健設施完善，對老年人的健康保障至關重要。許多高齡者傾向於遠離喧囂商圈，選擇環境安靜的生活區域，這有助於身心健康與生活品質的提升。因此，市中心及部分老舊社區成為80至100歲人口的主要聚集地。</p>
-        <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen></iframe>
+    <div id="age80to100" class="card">
+        <h2>80歲至100歲 高雄市人口</h2>
+        <div class="content-section">
+            <p>
+                高雄市80至100歲的高齡人口較為稀少，這部分人口的分佈特徵主要集中在市中心和一些老舊社區。這些區域通常交通便利、生活設施完備，但也常伴隨老舊建築與密集的居住環境。市中心靠近大型醫院和照護中心的社區提供便捷的醫療資源，有助於行動不便或有慢性病的高齡者即時獲得醫療服務。這些區域的護理機構、復健設施完善，對老年人的健康保障至關重要。許多高齡者傾向於遠離喧囂商圈，選擇環境安靜的生活區域，這有助於身心健康與生活品質的提升。因此，市中心及部分老舊社區成為80至100歲人口的主要聚集地。
+            </p>
+            <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen></iframe>
+        </div>
     </div>
 
     <!-- 活力夕陽計劃 -->
-    <h2 id="vitalSunset">活力夕陽計劃</h2>
-    <div class="card image-text-section">
-        <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片" style="max-width: 300px; border-radius: 10px;">
-        <p>隨著高齡人口比例日增，如何提升老年人的身體健康與生活品質成為社會關注的焦點。本計劃旨在透過輕度運動，如散步和簡單的健美操，改善老年人心肺功能，緩解長時間坐著帶來的疲勞，同時增進社交互動，減少孤獨感。計劃將設立輕度運動手工藝，每週定期舉辦散步和伸展操課程，適合各種體適能的長者參與。散步活動將安排固定路線並配有志工陪伴，不僅有助於提升心肺功能，還能促進社交交流。健身操和伸展課程將透過簡單易行的動作，增強關節靈活性、肌肉力量，改善血液循環，減少身體不適。此外，該計劃還結合社區志工團隊，為老年人提供居家安全評估和修繕服務，鼓勵具有木工、水電等技能的長者參與互助，增強他們的參與感與歸屬感。</p>
+    <div id="vitalSunset" class="card">
+        <h2>活力夕陽計劃</h2>
+        <div class="content-section">
+            <p>
+                隨著高齡人口比例日增，如何提升老年人的身體健康與生活品質成為社會關注的焦點。本計劃旨在透過輕度運動，如散步和簡單的健美操，改善老年人心肺功能，緩解長時間坐著帶來的疲勞，同時增進社交互動，減少孤獨感。計劃將設立輕度運動手工藝，每週定期舉辦散步和伸展操課程，適合各種體適能的長者參與。散步活動將安排固定路線並配有志工陪伴，不僅有助於提升心肺功能，還能促進社交交流。健身操和伸展課程將透過簡單易行的動作，增強關節靈活性、肌肉力量，改善血液循環，減少身體不適。此外，該計劃還結合社區志工團隊，為老年人提供居家安全評估和修繕服務，鼓勵具有木工、水電等技能的長者參與互助，增強他們的參與感與歸屬感。
+            </p>
+            <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片">
+        </div>
     </div>
 
 </body>

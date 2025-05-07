@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #d6ecff, #f9c8d4, #d8aaff); /* Sky blue to pink to purple gradient */
+            background: linear-gradient(to bottom, #d6ecff, #f9c8d4, #d8aaff);
         }
 
         h1, h2 {
@@ -19,7 +19,6 @@
             margin-top: 30px;
         }
 
-        /* 主標題卡片樣式 */
         .title-card {
             background: linear-gradient(to right, #d9f2e6, #f0faf4);
             margin: 30px auto;
@@ -37,7 +36,6 @@
             color: #2c3e50;
         }
 
-        /* 按鈕樣式 */
         .button-container {
             text-align: center;
             margin: 20px 0;
@@ -58,7 +56,6 @@
             background-color: #45a049;
         }
 
-        /* 通用卡片樣式 */
         .card {
             background-color: #fff;
             margin: 20px auto;
@@ -69,46 +66,28 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* 文字內容卡片 */
-        .text-box {
-            border-left: 6px solid #4CAF50;
-        }
-
-        .text-box p,
-        .image-text-section p {
-            font-size: 16px;
-            color: #555;
-            text-align: justify;
-        }
-
-        /* 圖表樣式 */
-        iframe {
-            display: block;
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        /* 圖片+文字卡片 */
         .image-text-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-start;
             gap: 20px;
         }
 
-        .image-text-section img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            flex-shrink: 0;
-        }
-
         .image-text-section p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
             flex: 1;
             min-width: 250px;
+        }
+
+        .image-text-section iframe {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
         }
 
         @media (max-width: 768px) {
@@ -116,9 +95,12 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .image-text-section iframe {
+                width: 100%;
+            }
         }
 
-        /* 开启平滑滚动效果 */
         html {
             scroll-behavior: smooth;
         }
@@ -126,7 +108,7 @@
 </head>
 <body>
 
-    <!-- 主標題美化卡片 -->
+    <!-- 主標題 -->
     <div class="title-card">
         <h1>高雄市人口分布</h1>
     </div>
@@ -139,34 +121,24 @@
     </div>
 
     <!-- 65至80歲 高雄市人口 -->
-    <h1 id="age65to80">高雄市人口分布（65歲至80歲）</h1>
-    <div class="card text-box">
-        <p>高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。 此外，許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。尤其是在老年人口較為集中的社區，週邊的公共服務和照顧設施也更加完備，為老年人提供了更好的居住條件。 老年人群的居住選擇趨向於綜合考慮生活便利性、醫療保障和居住環境的安全與舒適。因此，政府和社會應積極關注老年人的居住需求，提供更多的支持與保障，提升老年人的整體生活品質。</p>
-    </div>
-    
-    <h2>65歲至80歲 高雄市人口</h2>
-    <div class="card">
-        <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen="true"></iframe>
+    <h2 id="age65to80">65歲至80歲 高雄市人口</h2>
+    <div class="card image-text-section">
+        <p>高雄市65至80歲的人口呈現逐年增加的趨勢，特別是在市區和近郊區域，老年人口的集中度較高。隨著人口老化問題日益嚴峻，許多老年人選擇定居在生活設施完善、醫療資源充足的社區。市區以及部分近郊地帶提供了便利的交通和豐富的公共服務，成為老年人群體的首選居住地。這些區域不僅有完善的醫療機構，還提供了豐富的日常生活服務，如超市、社區活動中心等，能夠有效滿足老年人的生活需求。許多老年人更傾向於選擇那些環境安靜、綠化良好的社區，以提高生活品質和享受寧靜的居住環境。這些區域通常遠離市中心的喧囂，同時又能保持一定的交通便利性，適合老年人進行日常活動或外出就醫。政府和社會應積極關注老年人的居住需求，提供更多支持與保障，提升生活品質。</p>
+        <iframe src="https://plotdb.io/v/chart/37374" allowfullscreen></iframe>
     </div>
 
     <!-- 80至100歲 高雄市人口 -->
-    <h1 id="age80to100">高雄市人口分布（80歲至100歲）</h1>
-    <div class="card text-box">
-        <p>高雄市80至100歲的高齡人口較為稀少，這部分人口的分佈特徵主要集中在市中心和一些老舊社區。這些區域通常交通便利、生活設施較為完備，但也常伴隨一些老舊建築和較密集的居住環境。儘管如此，這些地區依然吸引了許多高齡者的定居，尤其是那些醫療資源較豐富的地區。市中心以及靠近大型醫院和專業照顧中心的社區，提供了便捷的醫療服務，能夠為老年人提供及時的健康照顧和緊急處理。 隨著高齡人口比例的增加，這些社區的醫療資源和照顧設施逐漸成為老年人選擇居住地的重要因素。在這些區域，不僅有醫院、診所等醫療機構，還有專門為老年人提供的護理中心和復健設施，為老年人提供全面的健康保障。高齡者的健康問題較為複雜，因此，選擇居住在這些區域能夠確保他們得到及時的醫療照顧，尤其是對於行動不便或有慢性病的老年人來說尤其重要。 此外，這些區域的居住環境通常較為安靜，周圍的噪音較少，非常適合老年人生活。許多老年人更願意生活在遠離繁華商業區的地方，享受寧靜舒適的居住環境，這有助於他們的身心健康。因此，市中心及老舊社區成為了80至100歲人口的主要聚集地。</p>
-    </div>
-
-    <h2>80歲至100歲 高雄市人口</h2>
-    <div class="card">
-        <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen="true"></iframe>
+    <h2 id="age80to100">80歲至100歲 高雄市人口</h2>
+    <div class="card image-text-section">
+        <p>高雄市80至100歲的高齡人口較為稀少，這部分人口的分佈特徵主要集中在市中心和一些老舊社區。這些區域通常交通便利、生活設施完備，但也常伴隨老舊建築與密集的居住環境。市中心靠近大型醫院和照護中心的社區提供便捷的醫療資源，有助於行動不便或有慢性病的高齡者即時獲得醫療服務。這些區域的護理機構、復健設施完善，對老年人的健康保障至關重要。許多高齡者傾向於遠離喧囂商圈，選擇環境安靜的生活區域，這有助於身心健康與生活品質的提升。因此，市中心及部分老舊社區成為80至100歲人口的主要聚集地。</p>
+        <iframe src="https://plotdb.io/v/chart/37385" allowfullscreen></iframe>
     </div>
 
     <!-- 活力夕陽計劃 -->
-    <h1 id="vitalSunset">活力夕陽計劃</h1>
+    <h2 id="vitalSunset">活力夕陽計劃</h2>
     <div class="card image-text-section">
-        <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片">
-        <p>
-            隨著高齡人口比例日增，如何提升老年人的身體健康與生活品質成為社會關注的焦點。本計劃旨在透過輕度運動，如散步和簡單的健美操，改善老年人心肺功能，緩解長時間坐著帶來的疲勞，同時增進社交互動，減少孤獨感。計劃將設立輕度運動手工藝，每週定期舉辦散步和伸展操課程，適合各種體適能的長者參與。散步活動將安排固定路線並配有志工陪伴，不僅有助於提升心肺功能，還能促進社交交流。健身操和伸展課程將透過簡單易行的動作，增強關節靈活性、肌肉力量，改善血液循環，減少身體不適。此外，該計劃還結合社區志工團隊，為老年人提供居家安全評估和修繕服務，鼓勵具有木工、水電等技能的長者參與互助，增強他們的參與感與歸屬感。
-        </p>
+        <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F7d14d279-1abe-4789-8bef-0bde54bfefa2.jpeg&w=1080&q=75" alt="銀髮族活動照片" style="max-width: 300px; border-radius: 10px;">
+        <p>隨著高齡人口比例日增，如何提升老年人的身體健康與生活品質成為社會關注的焦點。本計劃旨在透過輕度運動，如散步和簡單的健美操，改善老年人心肺功能，緩解長時間坐著帶來的疲勞，同時增進社交互動，減少孤獨感。計劃將設立輕度運動手工藝，每週定期舉辦散步和伸展操課程，適合各種體適能的長者參與。散步活動將安排固定路線並配有志工陪伴，不僅有助於提升心肺功能，還能促進社交交流。健身操和伸展課程將透過簡單易行的動作，增強關節靈活性、肌肉力量，改善血液循環，減少身體不適。此外，該計劃還結合社區志工團隊，為老年人提供居家安全評估和修繕服務，鼓勵具有木工、水電等技能的長者參與互助，增強他們的參與感與歸屬感。</p>
     </div>
 
 </body>

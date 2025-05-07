@@ -44,10 +44,12 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 5px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
         }
 
         .button-container button:hover {
             background-color: #45a049;
+            transform: scale(1.05);
         }
 
         .card {
@@ -91,6 +93,12 @@
             border: none;
             border-radius: 10px;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .content-section iframe:hover,
+        .content-section img:hover {
+            transform: scale(1.02);
         }
 
         @media (max-width: 768px) {
